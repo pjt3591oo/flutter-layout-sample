@@ -32,54 +32,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title + " TAB-" + _currentIndex.toString()),
         centerTitle: true,
-         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            // _scaffoldKey.currentState.openDrawer();
-            Navigator.pushNamed(context, '/');
-          },
-        ),
       ),
       body: PageView(
         controller: pageController,
         onPageChanged: onPageChangeHandler,
         children: _children,
-        physics: NeverScrollableScrollPhysics()
-      ),
-      endDrawer:Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.home),
-              // tileColor: Colors.grey[800],
-              title: Text('Item1'),
-              onTap: () {
-                print('Menu Icon Item1 Clicked');
-              }
-            ),
-            ListTile(
-              leading: Icon(Icons.image),
-              // tileColor: Colors.grey[800],
-              title: Text('Item2'),
-              onTap: () {
-                print('Menu Icon Item2 Clicked');
-              }
-            ),
-            ListTile(
-              leading: Icon(Icons.border_color),
-              // tileColor: Colors.grey[800],
-              title: Text('Item3'),
-              onTap: () {
-                print('Menu Icon Item3 Clicked');
-              }
-            ),
-          ],
-        )
+        // physics: NeverScrollableScrollPhysics()
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

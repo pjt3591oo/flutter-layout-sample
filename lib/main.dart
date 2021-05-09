@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:layout/screens/other_page/index.dart';
+import 'package:layout/screens/other/index.dart';
 import 'package:layout/screens/main/index.dart';
 
 void main() {
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => OtherPage(),
-        '/other': (context) => MyHomePage(title: 'Flutter Demo'),
+        '/': (context) => MyHomePage(title: 'Flutter Demo'),
+        '/other': (context) => Other(),
       }
     );
   }
