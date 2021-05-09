@@ -7,4 +7,4 @@ AppBar menu
 Router
 ```
 
-![](./demo.fig)
+![](https://github.com/pjt3591oo/flutter-layout-sample/blob/master/demo.gif)
